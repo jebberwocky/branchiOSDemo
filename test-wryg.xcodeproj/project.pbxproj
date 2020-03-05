@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4210A389239902EB0012CD46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4210A388239902EB0012CD46 /* GoogleService-Info.plist */; };
 		4223A09C21AE4DE6009D63AF /* WebViewControllder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4223A09B21AE4DE6009D63AF /* WebViewControllder.swift */; };
 		42425F8F2195F86A009D2F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42425F8E2195F86A009D2F7B /* AppDelegate.swift */; };
 		42425F912195F86B009D2F7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42425F902195F86B009D2F7B /* ViewController.swift */; };
@@ -16,9 +17,10 @@
 		42425FA42195F86D009D2F7B /* test_wrygTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42425FA32195F86D009D2F7B /* test_wrygTests.swift */; };
 		42425FAF2195F86D009D2F7B /* test_wrygUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42425FAE2195F86D009D2F7B /* test_wrygUITests.swift */; };
 		42425FBD219604E2009D2F7B /* test-wryg.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 42425FBC2195F90F009D2F7B /* test-wryg.entitlements */; };
-		4782E2D2844DFD5A4C2E07E8 /* Pods_test_wryg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20F1798B896B4C16693046C /* Pods_test_wryg.framework */; };
-		74D01255374D183D796BC9D1 /* Pods_test_wrygTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB95D9BCE706E857D670B852 /* Pods_test_wrygTests.framework */; };
-		A871BC3EFD24754B534E0E32 /* Pods_test_wrygUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264E8A2A57BEE827896AC160 /* Pods_test_wrygUITests.framework */; };
+		42BC00DA21B0F06600473FB4 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BC00D921B0F06600473FB4 /* DemoViewController.swift */; };
+		9E4F55C0D802A45F5215D78D /* Pods_test_wryg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A653A15ABD4ABABBE0306C2B /* Pods_test_wryg.framework */; };
+		CE6B2F258168431AA251F600 /* Pods_test_wrygTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1EBCD564FF59E5FC478D11 /* Pods_test_wrygTests.framework */; };
+		FFBB3FAC23E03679044582BC /* Pods_test_wrygUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7826A17F0289EB211A3A2F /* Pods_test_wrygUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		264E8A2A57BEE827896AC160 /* Pods_test_wrygUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_wrygUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7826A17F0289EB211A3A2F /* Pods_test_wrygUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_wrygUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D23A7AF1631FF452B9FD96 /* Pods-test-wrygUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-wrygUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-test-wrygUITests/Pods-test-wrygUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4210A388239902EB0012CD46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4223A09B21AE4DE6009D63AF /* WebViewControllder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllder.swift; sourceTree = "<group>"; };
 		42425F8B2195F86A009D2F7B /* test-wryg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-wryg.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42425F8E2195F86A009D2F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,13 +59,16 @@
 		42425FAE2195F86D009D2F7B /* test_wrygUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_wrygUITests.swift; sourceTree = "<group>"; };
 		42425FB02195F86D009D2F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42425FBC2195F90F009D2F7B /* test-wryg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "test-wryg.entitlements"; sourceTree = "<group>"; };
+		42BC00D921B0F06600473FB4 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		42F32259233E065900C0EE1F /* Branch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Branch.framework; path = "../../Downloads/Carthage 3/Build/iOS/Branch.framework"; sourceTree = "<group>"; };
+		42F3225C233E183B00C0EE1F /* Branch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Branch.framework; sourceTree = "<group>"; };
 		46760D8BA5D1D72A00B63766 /* Pods-test-wrygTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-wrygTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-test-wrygTests/Pods-test-wrygTests.release.xcconfig"; sourceTree = "<group>"; };
 		69AD1A1491DBDA186B760588 /* Pods-test-wrygUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-wrygUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test-wrygUITests/Pods-test-wrygUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F7F7DC1B40E6F572A08EC02 /* Pods-test-wryg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-wryg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test-wryg/Pods-test-wryg.debug.xcconfig"; sourceTree = "<group>"; };
+		A653A15ABD4ABABBE0306C2B /* Pods_test_wryg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_wryg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C197286007E2E210E88D4CED /* Pods-test-wryg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-wryg.release.xcconfig"; path = "Pods/Target Support Files/Pods-test-wryg/Pods-test-wryg.release.xcconfig"; sourceTree = "<group>"; };
 		C8212596A797A71DFAD9E1BD /* Pods-test-wrygTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-wrygTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test-wrygTests/Pods-test-wrygTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CB95D9BCE706E857D670B852 /* Pods_test_wrygTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_wrygTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E20F1798B896B4C16693046C /* Pods_test_wryg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_wryg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1EBCD564FF59E5FC478D11 /* Pods_test_wrygTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_wrygTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4782E2D2844DFD5A4C2E07E8 /* Pods_test_wryg.framework in Frameworks */,
+				9E4F55C0D802A45F5215D78D /* Pods_test_wryg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74D01255374D183D796BC9D1 /* Pods_test_wrygTests.framework in Frameworks */,
+				CE6B2F258168431AA251F600 /* Pods_test_wrygTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A871BC3EFD24754B534E0E32 /* Pods_test_wrygUITests.framework in Frameworks */,
+				FFBB3FAC23E03679044582BC /* Pods_test_wrygUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +102,7 @@
 		42425F822195F86A009D2F7B = {
 			isa = PBXGroup;
 			children = (
+				42F3225C233E183B00C0EE1F /* Branch.framework */,
 				42425F8D2195F86A009D2F7B /* test-wryg */,
 				42425FA22195F86D009D2F7B /* test-wrygTests */,
 				42425FAD2195F86D009D2F7B /* test-wrygUITests */,
@@ -118,10 +125,12 @@
 		42425F8D2195F86A009D2F7B /* test-wryg */ = {
 			isa = PBXGroup;
 			children = (
+				4210A388239902EB0012CD46 /* GoogleService-Info.plist */,
 				42425FBC2195F90F009D2F7B /* test-wryg.entitlements */,
 				42425F8E2195F86A009D2F7B /* AppDelegate.swift */,
 				42425F902195F86B009D2F7B /* ViewController.swift */,
 				42425F922195F86B009D2F7B /* Main.storyboard */,
+				42BC00D921B0F06600473FB4 /* DemoViewController.swift */,
 				42425F952195F86D009D2F7B /* Assets.xcassets */,
 				42425F972195F86D009D2F7B /* LaunchScreen.storyboard */,
 				42425F9A2195F86D009D2F7B /* Info.plist */,
@@ -164,9 +173,10 @@
 		CF7A47DE3FC9834415F5F92A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E20F1798B896B4C16693046C /* Pods_test_wryg.framework */,
-				CB95D9BCE706E857D670B852 /* Pods_test_wrygTests.framework */,
-				264E8A2A57BEE827896AC160 /* Pods_test_wrygUITests.framework */,
+				42F32259233E065900C0EE1F /* Branch.framework */,
+				A653A15ABD4ABABBE0306C2B /* Pods_test_wryg.framework */,
+				CD1EBCD564FF59E5FC478D11 /* Pods_test_wrygTests.framework */,
+				1E7826A17F0289EB211A3A2F /* Pods_test_wrygUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -286,6 +296,7 @@
 			files = (
 				42425FBD219604E2009D2F7B /* test-wryg.entitlements in Resources */,
 				42425F992195F86D009D2F7B /* LaunchScreen.storyboard in Resources */,
+				4210A389239902EB0012CD46 /* GoogleService-Info.plist in Resources */,
 				42425F962195F86D009D2F7B /* Assets.xcassets in Resources */,
 				42425F942195F86B009D2F7B /* Main.storyboard in Resources */,
 			);
@@ -384,12 +395,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-test-wryg/Pods-test-wryg-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Branch/Branch.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Branch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -406,6 +421,7 @@
 				42425F912195F86B009D2F7B /* ViewController.swift in Sources */,
 				42425F8F2195F86A009D2F7B /* AppDelegate.swift in Sources */,
 				4223A09C21AE4DE6009D63AF /* WebViewControllder.swift in Sources */,
+				42BC00DA21B0F06600473FB4 /* DemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,10 +597,15 @@
 			baseConfigurationReference = 7F7F7DC1B40E6F572A08EC02 /* Pods-test-wryg.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_ENTITLEMENTS = "test-wryg/test-wryg.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R63EM248DP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "test-wryg/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -603,10 +624,15 @@
 			baseConfigurationReference = C197286007E2E210E88D4CED /* Pods-test-wryg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_ENTITLEMENTS = "test-wryg/test-wryg.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R63EM248DP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "test-wryg/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>687680074727-irtrpgcs9t5hthbvrfo6j0b1s21j62fb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.687680074727-irtrpgcs9t5hthbvrfo6j0b1s21j62fb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDDElpgpuYVQrspk7D54Lr0yd77RbMGkZQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>687680074727</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.whereyogi.test-wryg</string>
+	<key>PROJECT_ID</key>
+	<string>whereyogi-jeff</string>
+	<key>STORAGE_BUCKET</key>
+	<string>whereyogi-jeff.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:687680074727:ios:a7f5ab8e67b1ec19078342</string>
+	<key>DATABASE_URL</key>
+	<string>https://whereyogi-jeff.firebaseio.com</string>
+</dict>
+</plist>

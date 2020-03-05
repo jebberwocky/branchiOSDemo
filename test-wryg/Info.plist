@@ -40,6 +40,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>branch_universal_link_domains</key>
+	<array>
+		<string>gotoedm.whereyogi.com</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

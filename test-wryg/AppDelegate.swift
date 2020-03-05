@@ -8,19 +8,58 @@
 
 import UIKit
 import Branch
+import Firebase
+import AdSupport
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var branchCPID: String = "cpid-nil"
+    
+    var branch_param_value: String = ""
 
+    func identifierForAdvertising() -> String? {
+        // Check whether advertising tracking is enabled
+        guard ASIdentifierManager.shared().isAdvertisingTrackingEnabled else {
+            return nil
+        }
+
+        // Get and return IDFA
+        return ASIdentifierManager.shared().advertisingIdentifier.uuidString
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+        
+        //Firebase
+        FirebaseApp.configure()
+        
+        Branch.getInstance().setDebug()
+        //Branch.getInstance().validateSDKIntegration()
         let branch: Branch = Branch.getInstance()
-        //branch.setDebug()
+        
+        
+        print("IDFA: ", identifierForAdvertising());
+        
+        
+       // branch.setDebug()
+        branch.setRequestMetadataKey("your_device_id",value:"UUID_JEFF_LIU")
+        branch.setRequestMetadataKey("after_empty",value:"after_empty")
+        print("getLongURL")
+        print(Branch.getInstance().getLongURL(withParams:nil))
+       
         branch.initSession() { (params, error) in
-            //print(params as? [String: AnyObject] ?? {})
+        
+            print("initSession called")
+            print(params as? [String: AnyObject] ?? {})
+            do{
+            let arrJson = try JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions.prettyPrinted)
+                self.branch_param_value = String(data: arrJson, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
+            }catch let error as NSError{
+               print(error.description)
+           }
+            branch.setIdentity("UUID_JEFF_LIU")
             
             guard let paramsDictionary = (params as? Dictionary<String, Any>),
                 let clickedBranchLink = paramsDictionary[BRANCH_INIT_KEY_CLICKED_BRANCH_LINK] as? Bool
@@ -29,10 +68,67 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     return
             }
             
+            if(error == nil && params != nil){
+                 // create and add properties that you want to track in Firebase
+                 var firebase_params = [String: Any]()
+                 firebase_params["clicked_branch_link"] =  params?["+clicked_branch_link"] ?? ""
+                 // get the click timestamp
+                 firebase_params["click_timestamp"] = params?["+click_timestamp"] ?? ""
+                 // get the link OG title
+                 firebase_params["link_title"] = params?["$og_title"] ?? ""
+                 // get the link OG image
+                 firebase_params["link_image"] =  params?["$og_image_url"] ?? ""
+                 // get the link campaign
+                 firebase_params["utm_campaign"] = params?["~campaign"] ?? ""
+                 // get the link channel
+                 firebase_params["utm_medium"] = params?["channel"] ?? ""
+                 // get the link feature
+                 firebase_params["utm_source"] = params?["~feature"] ?? ""
+                 // check if this is an open or and install event
+                 if(UserDefaults.standard.object(forKey: "is_first_session") == nil){
+                   UserDefaults.standard.set(true, forKey: "is_first_session")
+                 }
+                               else{
+                   UserDefaults.standard.set(false, forKey: "is_first_session")
+                 }
+                 let event_name = UserDefaults.standard.bool(forKey: "is_first_session") == true ? "branch_install" : "branch_open"
+                 // track the event to Firebase
+                 Analytics.logEvent(event_name, parameters: firebase_params)
+               }
+            
+            //LATD
+            Branch.getInstance().lastAttributedTouchData(withAttributionWindow: 7) { (data)->() in
+               print("LATD")
+               let latd = data as? BranchLastAttributedTouchData
+               if(latd != nil){
+                   let _json = latd?.lastAttributedTouchJSON
+                    print(_json)
+               }
+           }
+            
+            
+            if (paramsDictionary["$3p"] != nil && paramsDictionary["$web_only"] != nil) {
+                let url = paramsDictionary["$original_url"] as? String
+                print(url as? String)
+            }
+            
             let canonicalUrl = paramsDictionary["$canonical_url"] as? String
-            if clickedBranchLink {
+            print(canonicalUrl as? String)
+            if clickedBranchLink && canonicalUrl != nil {
+                /*
+                let nc = self.window!.rootViewController as! UINavigationController
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let webViewController = storyboard.instantiateViewController(withIdentifier: "Web") as! WebViewViewController
+                nc.popToRootViewController(animated: true)
+                print(canonicalUrl!);
+                if(!canonicalUrl!.isEmpty)
+                {
+                    webViewController.passedURL = canonicalUrl!
+                    nc.pushViewController(webViewController, animated: true)
+                }
                 let urlsplits = canonicalUrl!.split(separator: "?");
-                if (canonicalUrl != nil  && urlsplits.count > 0){
+                
+                if (canonicalUrl != nil  && urlsplits.count > 1){
                     let requestPramas = canonicalUrl!.split(separator: "?")[1].split(separator: "&")
                     var partnerURL = ""
                     for dics in requestPramas{
@@ -56,7 +152,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             }
                         }
                     }
-                }
+                }*/
             }
             
         }
@@ -65,12 +161,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        print("application open url:")
+        print(url.absoluteURL)
         Branch.getInstance().application(app, open: url, options: options)
         return true
     }
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        Branch.getInstance()?.continue(userActivity)
+        Branch.getInstance().continue(userActivity)
         return true
     }
     

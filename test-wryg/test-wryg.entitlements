@@ -6,6 +6,7 @@
 	<array>
 		<string>applinks:whereyogi.app.link</string>
 		<string>applinks:whereyogi-alternate.app.link</string>
+		<string>applinks:gotoedm.whereyogi.com</string>
 	</array>
 </dict>
 </plist>
